@@ -3,3 +3,6 @@ pandas
 python-dotenv
 boto3
 selenium
+vaderSentiment
+wordcloud
+Flask
