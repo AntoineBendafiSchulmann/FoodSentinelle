@@ -1,0 +1,32 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Logs",
+            "Effect": "Allow",
+            "Action": [
+            "logs:CreateLogGroup",
+            "logs:CreateLogStream",
+            "logs:PutLogEvents"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "DDBScan",
+            "Effect": "Allow",
+            "Action": [
+            "dynamodb:Scan"
+            ],
+            "Resource": "arn:aws:dynamodb:*:*:table/Restaurants"
+        },
+        {
+            "Sid": "S3Presign",
+            "Effect": "Allow",
+            "Action": [
+            "s3:PutObject",
+            "s3:GetObject"
+            ],
+            "Resource": "arn:aws:s3:::foodsentinelle-charts-2025/*"
+        }
+    ]
+}

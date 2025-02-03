@@ -113,6 +113,46 @@ To access the QuickSight dashboard, log in to your AWS QuickSight account and na
 
 ---
 
+### FoodSentinelle API Documentation
+1. **GET /restaurants**  
+   - Renvoie la liste de restaurants stockés dans la table DynamoDB `Restaurants`.
+
+2. **GET /visuals?file=...**  
+   - Retourne un lien (valable 1 heure) pour télécharger le nuage de points depuis un bucket S3.
+
+
+Pour invoquer la Lambda en local (via AWS CLI) et enregistrer la réponse dans un fichier (par exemple out.json):
+
+```bash
+aws lambda invoke \
+  --function-name FoodSentinelleAPI \
+  --cli-binary-format raw-in-base64-out \
+  --payload '{"path":"/restaurants","httpMethod":"GET"}' \
+  restaurants.json
+
+cat restaurants.json
+```
+
+De même, pour tester le second endpoint , par contre le lien périme après 1 heure:
+
+```bash
+aws lambda invoke \
+  --function-name FoodSentinelleAPI \
+  --cli-binary-format raw-in-base64-out \
+  --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"nuage_points_freq_sent"}}' \
+    visuals.json
+
+```
+ca donnera un fichier visuals.json contenant le lien pour télécharger le nuage de points.
+
+de cette forme :
+
+```json
+{
+{"statusCode": 200, "body": "{\"url\": \"LIEN-A-COLLER-DANS-UN-NAVIGATEUR\"}", "headers": {"Content-Type": "application/json"}}
+}
+```
+
 ## **Contributors**
 
 Antoine Bendafi-Schulmann
