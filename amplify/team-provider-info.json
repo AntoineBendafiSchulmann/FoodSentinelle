@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-foodsentinelle-dev-105857-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767398026641:role/amplify-foodsentinelle-dev-105857-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767398026641:role/amplify-foodsentinelle-dev-105857-authRole",
+      "Region": "eu-west-3",
+      "DeploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+      "UnauthRoleName": "amplify-foodsentinelle-dev-105857-unauthRole",
+      "StackName": "amplify-foodsentinelle-dev-105857",
+      "StackId": "arn:aws:cloudformation:eu-west-3:767398026641:stack/amplify-foodsentinelle-dev-105857/7c60bd40-e215-11ef-ab7c-06ebe2b37f7d",
+      "AmplifyAppId": "d1fxvjbq58zc5a"
+    }
+  }
+}
