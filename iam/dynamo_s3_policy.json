@@ -1,0 +1,23 @@
+{
+    "Version": "2012-10-17",
+        "Statement": [
+        {
+            "Sid": "DDBRead",
+            "Effect": "Allow",
+            "Action": [
+            "dynamodb:Scan",
+            "dynamodb:GetItem",
+            "dynamodb:Query"
+            ],
+            "Resource": "arn:aws:dynamodb:*:*:table/Reviews"
+        },
+        {
+            "Sid": "S3Write",
+            "Effect": "Allow",
+            "Action": [
+            "s3:PutObject"
+            ],
+            "Resource": "arn:aws:s3:::fooodsentinelle-export-bucket-json/*"
+        }
+    ]
+}  
