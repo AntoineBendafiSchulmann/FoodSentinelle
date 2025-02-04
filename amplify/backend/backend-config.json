@@ -32,6 +32,11 @@
     }
   },
   "function": {
+    "ExportDynamoDbToS3": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "getRestaurant": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -55,6 +60,22 @@
     }
   },
   "parameters": {
+    "AMPLIFY_function_ExportDynamoDbToS3_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ExportDynamoDbToS3"
+        }
+      ]
+    },
+    "AMPLIFY_function_ExportDynamoDbToS3_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "ExportDynamoDbToS3"
+        }
+      ]
+    },
     "AMPLIFY_function_getRestaurant_deploymentBucketName": {
       "usedBy": [
         {

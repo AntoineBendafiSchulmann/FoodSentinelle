@@ -1,0 +1,34 @@
+[
+  {
+    "Effect": "Allow",
+    "Action": [
+      "logs:CreateLogGroup",
+      "logs:CreateLogStream",
+      "logs:PutLogEvents"
+    ],
+    "Resource": [
+      "*"
+    ]
+  },
+  {
+    "Effect": "Allow",
+    "Action": [
+      "dynamodb:Scan"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:eu-west-3:767398026641:table/Reviews"
+    ]
+  },
+  {
+    "Effect": "Allow",
+    "Action": [
+      "s3:PutObject",
+      "s3:GetObject",
+      "s3:ListBucket"
+    ],
+    "Resource": [
+      "arn:aws:s3:::fooodsentinelle-export-bucket-json",
+      "arn:aws:s3:::fooodsentinelle-export-bucket-json/*"
+    ]
+  }
+]

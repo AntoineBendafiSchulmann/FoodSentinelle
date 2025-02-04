@@ -27,7 +27,11 @@
         },
         "scrapSelenium": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-          "s3Key": "amplify-builds/scrapSelenium-7a34524766584175526f-build.zip"
+          "s3Key": "amplify-builds/scrapSelenium-43694366466b63737a45-build.zip"
+        },
+        "ExportDynamoDbToS3": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+          "s3Key": "amplify-builds/ExportDynamoDbToS3-50536947353934386e61-build.zip"
         }
       },
       "api": {
