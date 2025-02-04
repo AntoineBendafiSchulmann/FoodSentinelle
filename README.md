@@ -170,6 +170,8 @@ aws lambda invoke \
 
 ## **Dashboard QuickSight**
 
+![quicksight](./docs/dashboard_quicksight.png)
+
 Amazon QuickSight is integrated to provide interactive visual analytics on the collected restaurant data. The dashboard includes:
 
 - **Sentiment Analysis Trends** – Displays positive, neutral, and negative review trends.
