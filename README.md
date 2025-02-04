@@ -132,17 +132,27 @@ aws lambda invoke \
 cat restaurants.json
 ```
 
-De même, pour tester le second endpoint , par contre le lien périme après 1 heure:
+Similarly, to test the second endpoint, however the link expires after 1 hour:
 
+#### for the histogram:
+
+```bash
+aws lambda invoke \
+  --function-name FoodSentinelleAPI \
+  --cli-binary-format raw-in-base64-out \
+  --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"sentiment_hist"}}' \
+  visuals_histo.json
+
+cat visuals_histo.json
+```
+#### for the scatterplot:
 ```bash
 aws lambda invoke \
   --function-name FoodSentinelleAPI \
   --cli-binary-format raw-in-base64-out \
   --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"nuage_points_freq_sent"}}' \
     visuals.json
-
 ```
-Similarly, to test the second endpoint, however the link expires after 1 hour:
 
 ```json
 {
