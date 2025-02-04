@@ -118,7 +118,7 @@ To access the QuickSight dashboard, log in to your AWS QuickSight account and na
    - Returns the list of restaurants stored in the `Restaurants` DynamoDB table.
 
 2. **GET /visuals?file=...**  
-   - Returns a link (valid for 1 hour) to download the point cloud from an S3 bucket.
+   - Returns a link (valid for 1 hour) to download the point cloud or thr scatterplot from the S3 bucket.
 
 To invoke the Lambda function locally (via AWS CLI) and save the response to a file (e.g. restaurants.json or visuals.json):
 
