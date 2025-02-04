@@ -1,6 +1,6 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Lambda Function resource stack creation using Amplify CLI",
+  "Description": "{\"createdOn\":\"Mac\",\"createdBy\":\"Amplify\",\"createdWith\":\"12.10.0\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "crapSelenium",
+            "scrapSelenium",
             {
               "Fn::Join": [
                 "",
                 [
-                  "crapSelenium",
+                  "scrapSelenium",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "foodsentinelleLambdaRole4a206a88",
+            "foodsentinelleLambdaRole920ac985",
             {
               "Fn::Join": [
                 "",
                 [
-                  "foodsentinelleLambdaRole4a206a88",
+                  "foodsentinelleLambdaRole920ac985",
                   "-",
                   {
                     "Ref": "env"
@@ -164,32 +164,6 @@
           ]
         }
       }
-    },
-    "secretmanagerexecutionpolicy": {
-      "Type": "AXS::IAM::Policy",
-      "Properties": {
-        "PolicyName": "secretmanager-execution-policy",
-        "Roles": [
-          {
-            "Ref": "LambdaExecutionRole"
-          }
-        ],
-        "PolicyDocument": {
-          "Version": "2012-10-17",
-          "Statement": [
-            {
-              "Effect": "Allow",
-              "Action": [
-                "secretmanager:GetSecretValue"
-              ],
-              "Resource": "*"
-            }
-          ]
-        }
-      },
-      "DependsOn": [
-        "LambdaExecutionRole"
-      ]
     }
   },
   "Outputs": {

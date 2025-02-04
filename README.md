@@ -128,17 +128,13 @@ aws lambda invoke \
   --cli-binary-format raw-in-base64-out \
   --payload '{"path":"/restaurants","httpMethod":"GET"}' \
   restaurants.json
-```
 
-After invoking the lambda, you can open the json file by doing this :
-
-```bash
 cat restaurants.json
 ```
 
-Similarly, to test the second endpoint, however the link expires after 1 hour :
+Similarly, to test the second endpoint, however the link expires after 1 hour:
 
-For the histogram:
+#### for the histogram:
 
 ```bash
 aws lambda invoke \
@@ -146,14 +142,9 @@ aws lambda invoke \
   --cli-binary-format raw-in-base64-out \
   --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"sentiment_hist"}}' \
   visuals_histo.json
-```
 
-Same as the FoodSentinelleAPI function, you can check the results by executing the cat command :
-
-```bash
 cat visuals_histo.json
 ```
-
 #### for the scatterplot:
 ```bash
 aws lambda invoke \
@@ -165,9 +156,7 @@ aws lambda invoke \
 
 ```json
 {
-   "statusCode": 200,
-   "body": "{\"url\": \"LINK-TO-PASTE-IN-A-NAVIGATOR\"}",
-   "headers": {"Content-Type": "application/json"}
+{"statusCode": 200, "body": "{\"url\": \"LINK-TO-PASTE-IN-A-NAVIGATOR\"}", "headers": {"Content-Type": "application/json"}}
 }
 ```
 

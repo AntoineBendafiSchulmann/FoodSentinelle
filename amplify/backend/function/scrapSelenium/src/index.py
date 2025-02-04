@@ -5,6 +5,7 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from botocore.exceptions import ClientError
 import boto3
 import json
 
@@ -12,13 +13,24 @@ from src.yelp_api import get_restaurants_by_location
 from src.db import put_restaurant, put_review
 
 def get_secret():
+
     secret_name = "yelp_api_key"
     region_name = "eu-west-3"
-    client = boto3.client("secretsmanager", region_name=region_name)
-    response = client.get_secret_value(SecretId=secret_name)
-    secret = json.loads(response["SecretString"])
 
-    return secret.get("yelp_api_key", "")
+    session = boto3.session.Session()
+    client = session.client(
+        service_name='secretsmanager',
+        region_name=region_name
+    )
+
+    try:
+        get_secret_value_response = client.get_secret_value(
+            SecretId=secret_name
+        )
+    except ClientError as e:
+        raise e
+
+    secret = get_secret_value_response['SecretString']
 
 def get_selenium_driver():
     chrome_options = Options()

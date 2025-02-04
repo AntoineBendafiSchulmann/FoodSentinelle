@@ -47,6 +47,11 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "scrapSelenium": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
     }
   },
   "parameters": {
@@ -95,6 +100,22 @@
         {
           "category": "function",
           "resourceName": "getVisuals"
+        }
+      ]
+    },
+    "AMPLIFY_function_scrapSelenium_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "scrapSelenium"
+        }
+      ]
+    },
+    "AMPLIFY_function_scrapSelenium_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "scrapSelenium"
         }
       ]
     }
