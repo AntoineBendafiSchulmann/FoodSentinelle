@@ -1,4 +1,4 @@
-# FoodSentielle
+# FoodSentinelle
 
 FoodSentinelle is a project designed to manipulate and analyze restaurant reviews based on city names, leveraging AWS services, sentiment analysis, and automation.
 
@@ -9,9 +9,14 @@ FoodSentinelle is a project designed to manipulate and analyze restaurant review
 - [Project Overview](#project-overview)
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
+  - [Clone the Repository](#1-clone-the-repository)
+  - [Set Up Environment Variables](#2-set-up-environment-variables)
+  - [Set Up Python Environment](#3-set-up-python-environment)
 - [Usage](#usage)
-- [Lambda Behavior](#lambda-behavior)
+- [API Documentation](#api-documentation)
 - [Dashboard Quicksight](#dashboard-quicksight)
+- [Monte Carlo Method](#monte-carlo-method)
+- [Scatter Plot Analysis](#scatter-plot-analysis)
 - [Contributors](#contributors)
 
 ---
@@ -27,8 +32,8 @@ This project integrates multiple technologies and services, including:
 - **Flask** – As a lightweight API to process data.
 - **Selenium** – For web scraping automation.
 - **AWS Lambda** – For scheduled automation of data retrieval.
-- **Dashboard Quicksight** – For data visualization and analytics.
-- **Bucket S3** – For storing processed data and assets.
+- **Amazon QuickSight** – For data visualization and analytics.
+- **Amazon S3** – For storing processed data and assets.
 - **AWS IAM** – For managing permissions and security.
 
 ---
@@ -44,16 +49,14 @@ Before you begin, ensure you have the following installed:
 
 ## **Installation**
 
-### 1. **Clone the FoodSentinelle repository**
-
-First, clone this repository:
+### 1. **Clone the Repository**
 
 ```bash
 git clone <foodsentinelle-repository-url>
 cd foodsentinelle
 ```
 
-### 2. **Set up your environment variables**
+### 2. **Set Up Environment Variables**
 
 Copy the environment variable template:
 
@@ -63,7 +66,7 @@ cp .env.example .env
 
 Then, update the `.env` file with the required API keys and credentials.
 
-### 3. **Set up your Python environment**
+### 3. **Set Up Python Environment**
 
 Create and activate a virtual environment:
 
@@ -94,13 +97,78 @@ This will retrieve details of 10 restaurants and pick 10 random reviews.
 
 ---
 
-## **Lambda Behavior**
+## **API Documentation**
 
-A scheduled AWS Lambda function runs every **XX hours** to fetch and update restaurant ratings and reviews automatically.
+### **Available Endpoints**
+
+#### **GET /restaurants** - Show all restaurants
+```bash
+curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/restaurants"
+```
+
+#### **GET /restaurants/{restaurant_id}** - Show a specific restaurant
+```bash
+curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/restaurants/T6krutcCsZ317NS_EGbUZQ"
+```
+
+#### **GET /visuals?file=nuage_points_freq_sent** - Show scatter plot
+```bash
+curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/visuals?file=nuage_points_freq_sent"
+```
+
+#### **GET /visuals?file=sentiment_hist** - Show sentiment diagram
+```bash
+curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/visuals?file=sentiment_hist"
+```
+
+### **Invoke Lambda Function**
+To manually invoke the Lambda function using AWS CLI:
+
+#### **Retrieve Restaurants List**
+```bash
+aws lambda invoke \
+  --function-name FoodSentinelleAPI \
+  --cli-binary-format raw-in-base64-out \
+  --payload '{"path":"/restaurants","httpMethod":"GET"}' \
+  restaurants.json
+
+cat restaurants.json
+```
+
+#### **Retrieve Sentiment Histogram**
+```bash
+aws lambda invoke \
+  --function-name FoodSentinelleAPI \
+  --cli-binary-format raw-in-base64-out \
+  --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"sentiment_hist"}}' \
+  visuals_histo.json
+
+cat visuals_histo.json
+```
+
+#### **Retrieve Scatter Plot**
+```bash
+aws lambda invoke \
+  --function-name FoodSentinelleAPI \
+  --cli-binary-format raw-in-base64-out \
+  --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"nuage_points_freq_sent"}}' \
+  visuals.json
+```
+
+#### **Example JSON Response:**
+```json
+{
+   "statusCode": 200, 
+   "body": "{\"url\": \"LINK-TO-PASTE-IN-A-NAVIGATOR\"}", 
+   "headers": {
+      "Content-Type": "application/json"
+   }
+}
+```
 
 ---
 
-## **Dashboard Quicksight**
+## **Dashboard QuickSight**
 
 Amazon QuickSight is integrated to provide interactive visual analytics on the collected restaurant data. The dashboard includes:
 
@@ -113,54 +181,23 @@ To access the QuickSight dashboard, log in to your AWS QuickSight account and na
 
 ---
 
-### FoodSentinelle API Documentation
-1. **GET /restaurants**  
-   - Returns the list of restaurants stored in the `Restaurants` DynamoDB table.
+## **Monte Carlo Method**
 
-2. **GET /visuals?file=...**  
-   - Returns a link (valid for 1 hour) to download the point cloud or thr scatterplot from the S3 bucket.
+![monte carlo](./docs/monte_carlo_method.png)
+The Monte Carlo method is used to simulate and predict sentiment trends based on restaurant reviews.
 
-To invoke the Lambda function locally (via AWS CLI) and save the response to a file (e.g. restaurants.json or visuals.json):
+---
 
-```bash
-aws lambda invoke \
-  --function-name FoodSentinelleAPI \
-  --cli-binary-format raw-in-base64-out \
-  --payload '{"path":"/restaurants","httpMethod":"GET"}' \
-  restaurants.json
+## **Scatter Plot Analysis**
 
-cat restaurants.json
-```
+![scatter plot](./docs/words_frequency.png)
+The scatter plot visualization provides insights into word frequency and sentiment correlations within restaurant reviews.
 
-Similarly, to test the second endpoint, however the link expires after 1 hour:
-
-#### for the histogram:
-
-```bash
-aws lambda invoke \
-  --function-name FoodSentinelleAPI \
-  --cli-binary-format raw-in-base64-out \
-  --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"sentiment_hist"}}' \
-  visuals_histo.json
-
-cat visuals_histo.json
-```
-#### for the scatterplot:
-```bash
-aws lambda invoke \
-  --function-name FoodSentinelleAPI \
-  --cli-binary-format raw-in-base64-out \
-  --payload '{"path":"/visuals","httpMethod":"GET","queryStringParameters":{"file":"nuage_points_freq_sent"}}' \
-    visuals.json
-```
-
-```json
-{
-{"statusCode": 200, "body": "{\"url\": \"LINK-TO-PASTE-IN-A-NAVIGATOR\"}", "headers": {"Content-Type": "application/json"}}
-}
-```
+---
 
 ## **Contributors**
 
-Antoine Bendafi-Schulmann
-Sorën Messelier-Sentis
+- **Antoine Bendafi-Schulmann**
+- **Patrick Bartosik**
+- **Sorën Messelier-Sentis**
+
