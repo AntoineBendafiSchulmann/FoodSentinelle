@@ -146,7 +146,7 @@ Similarly, to test the second endpoint, however the link expires after 1 hour:
 
 ```json
 {
-{"statusCode": 200, "body": "{\"url\": \"LIEN-A-COLLER-DANS-UN-NAVIGATEUR\"}", "headers": {"Content-Type": "application/json"}}
+{"statusCode": 200, "body": "{\"url\": \"LINK-TO-PASTE-IN-A-NAVIGATOR\"}", "headers": {"Content-Type": "application/json"}}
 }
 ```
 
