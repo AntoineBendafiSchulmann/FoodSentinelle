@@ -13,7 +13,21 @@
     },
     "categories": {
       "function": {
-        "crapSelenium": {}
+        "getRestaurants": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+          "s3Key": "amplify-builds/getRestaurants-6b6c7459514835543336-build.zip"
+        },
+        "getVisuals": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+          "s3Key": "amplify-builds/getVisuals-3965506e46646b575453-build.zip"
+        },
+        "getRestaurant": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+          "s3Key": "amplify-builds/getRestaurant-6571454946575544365a-build.zip"
+        }
+      },
+      "api": {
+        "restaurants": {}
       }
     }
   }

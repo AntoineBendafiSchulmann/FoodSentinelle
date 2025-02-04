@@ -1,9 +1,102 @@
 {
+  "api": {
+    "restaurants": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getVisuals"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getRestaurants"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getRestaurant"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "function": {
-    "crapSelenium": {
+    "getRestaurant": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
+    },
+    "getRestaurants": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "getVisuals": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_getRestaurant_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRestaurant"
+        }
+      ]
+    },
+    "AMPLIFY_function_getRestaurant_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRestaurant"
+        }
+      ]
+    },
+    "AMPLIFY_function_getRestaurants_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_getRestaurants_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_getVisuals_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getVisuals"
+        }
+      ]
+    },
+    "AMPLIFY_function_getVisuals_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getVisuals"
+        }
+      ]
     }
   }
 }
