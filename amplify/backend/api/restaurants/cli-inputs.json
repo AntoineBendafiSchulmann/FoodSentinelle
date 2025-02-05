@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "paths": {
+    "/visuals": {
+      "name": "/visuals",
+      "lambdaFunction": "apiGetVisuals",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/restaurants": {
+      "name": "/restaurants",
+      "lambdaFunction": "apiGetRestaurants",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/getRestaurant": {
+      "name": "/getRestaurant",
+      "lambdaFunction": "apiGetRestaurant",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

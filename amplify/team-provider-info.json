@@ -24,7 +24,10 @@
         "SentimentIntensityAnalyzed": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
           "s3Key": "amplify-builds/SentimentIntensityAnalyzed-4b46614d57526a6b3671-build.zip"
-        }
+        },
+        "apiGetRestaurant": {},
+        "apiGetRestaurants": {},
+        "apiGetVisuals": {}
       }
     }
   }

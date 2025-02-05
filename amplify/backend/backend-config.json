@@ -1,4 +1,36 @@
 {
+  "api": {
+    "restaurants": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "apiGetVisuals"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "apiGetRestaurants"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "apiGetRestaurant"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
   "function": {
     "ExportDynamoToS3": {
       "build": true,
@@ -12,6 +44,21 @@
       "service": "Lambda"
     },
     "SentimentIntensityAnalyzed": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "apiGetRestaurant": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "apiGetRestaurants": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "apiGetVisuals": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"

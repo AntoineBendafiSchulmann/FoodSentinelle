@@ -1,0 +1,11 @@
+[
+  {
+    "Effect": "Allow",
+    "Action": [
+      "dynamodb:GetItem"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:eu-west-3:767398026641:table/Restaurants"
+    ]
+  }
+]
