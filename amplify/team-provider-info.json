@@ -35,7 +35,7 @@
         },
         "apiGetVisuals": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
-          "s3Key": "amplify-builds/apiGetVisuals-61422f316d53776d3565-build.zip"
+          "s3Key": "amplify-builds/apiGetVisuals-44547549697571523063-build.zip"
         }
       },
       "api": {
