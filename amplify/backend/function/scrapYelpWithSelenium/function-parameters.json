@@ -1,0 +1,8 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:eu-west-3:767398026641:layer:chrome_aws_lambda:1"
+    }
+  ]
+}

@@ -15,7 +15,7 @@
       "function": {
         "ExportDynamoToS3": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
-          "s3Key": "amplify-builds/ExportDynamoToS3-51784b4b737377367956-build.zip"
+          "s3Key": "amplify-builds/ExportDynamoToS3-6342337539363544642b-build.zip"
         },
         "FoodSentinelleGraphGeneratored": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
@@ -27,15 +27,19 @@
         },
         "apiGetRestaurant": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
-          "s3Key": "amplify-builds/apiGetRestaurant-774769347154374e654f-build.zip"
+          "s3Key": "amplify-builds/apiGetRestaurant-7059324a594950483244-build.zip"
         },
         "apiGetRestaurants": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
-          "s3Key": "amplify-builds/apiGetRestaurants-65672f525a7a5931444c-build.zip"
+          "s3Key": "amplify-builds/apiGetRestaurants-767759706a6877556365-build.zip"
         },
         "apiGetVisuals": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
           "s3Key": "amplify-builds/apiGetVisuals-44547549697571523063-build.zip"
+        },
+        "scrapYelpWithSelenium": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/scrapYelpWithSelenium-6f4742735239766b7172-build.zip"
         }
       },
       "api": {

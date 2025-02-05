@@ -1,0 +1,25 @@
+[
+  {
+    "Effect": "Allow",
+    "Action": [
+      "dynamodb:GetItem",
+      "dynamodb:PutItem",
+      "dynamodb:UpdateItem",
+      "dynamodb:DeleteItem",
+      "dynamodb:Scan",
+      "dynamodb:Query"
+    ],
+    "Resource": [
+      "arn:aws:dynamodb:eu-west-3:767398026641:table/Reviews"
+    ]
+  },
+  {
+    "Effect": "Allow",
+    "Action": [
+      "secretsmanager:GetSecretValue"
+    ],
+    "Resource": [
+      "arn:aws:secretsmanager:eu-west-3:767398026641:secret:yelp_api_key-dSyIyN"
+    ]
+  }
+]
