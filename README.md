@@ -104,22 +104,22 @@ This will retrieve details of 10 restaurants and pick 10 random reviews.
 
 #### **GET /restaurants** - Show all restaurants
 ```bash
-curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/restaurants"
+curl "https://k7b3mtduz8.execute-api.eu-west-3.amazonaws.com/dev/restaurants"
 ```
 
 #### **GET /restaurants/{restaurant_id}** - Show a specific restaurant
 ```bash
-curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/restaurants/T6krutcCsZ317NS_EGbUZQ"
+curl "https://k7b3mtduz8.execute-api.eu-west-3.amazonaws.com/dev/restaurants/T6krutcCsZ317NS_EGbUZQ"
 ```
 
 #### **GET /visuals?file=nuage_points_freq_sent** - Show scatter plot
 ```bash
-curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/visuals?file=nuage_points_freq_sent"
+curl "https://k7b3mtduz8.execute-api.eu-west-3.amazonaws.com/dev/visuals?file=nuage_points_freq_sent_7338a016-3ef1-4c54-a582-afd1df9ef522.svg"
 ```
 
 #### **GET /visuals?file=sentiment_hist** - Show sentiment diagram
 ```bash
-curl "https://ln40w9upsk.execute-api.eu-west-3.amazonaws.com/dev/visuals?file=sentiment_hist"
+curl "https://k7b3mtduz8.execute-api.eu-west-3.amazonaws.com/dev/visuals?file=sentiment_hist_3f44c0ff-669e-4c24-9b55-062d7951a5aa.svg"
 ```
 
 ### **Invoke Lambda Function**

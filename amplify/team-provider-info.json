@@ -1,37 +1,41 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-foodsentinelle-dev-105857-authRole",
-      "UnauthRoleArn": "arn:aws:iam::767398026641:role/amplify-foodsentinelle-dev-105857-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::767398026641:role/amplify-foodsentinelle-dev-105857-authRole",
+      "AuthRoleName": "amplify-foodsentinelle-dev-2b6bd-authRole",
+      "UnauthRoleArn": "arn:aws:iam::767398026641:role/amplify-foodsentinelle-dev-2b6bd-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::767398026641:role/amplify-foodsentinelle-dev-2b6bd-authRole",
       "Region": "eu-west-3",
-      "DeploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-      "UnauthRoleName": "amplify-foodsentinelle-dev-105857-unauthRole",
-      "StackName": "amplify-foodsentinelle-dev-105857",
-      "StackId": "arn:aws:cloudformation:eu-west-3:767398026641:stack/amplify-foodsentinelle-dev-105857/7c60bd40-e215-11ef-ab7c-06ebe2b37f7d",
-      "AmplifyAppId": "d1fxvjbq58zc5a"
+      "DeploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+      "UnauthRoleName": "amplify-foodsentinelle-dev-2b6bd-unauthRole",
+      "StackName": "amplify-foodsentinelle-dev-2b6bd",
+      "StackId": "arn:aws:cloudformation:eu-west-3:767398026641:stack/amplify-foodsentinelle-dev-2b6bd/6d9308b0-e3d0-11ef-93d8-0a84c8ef3669",
+      "AmplifyAppId": "d2o5n0i14sc631"
     },
     "categories": {
       "function": {
-        "getRestaurants": {
-          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-          "s3Key": "amplify-builds/getRestaurants-6b6c7459514835543336-build.zip"
+        "ExportDynamoToS3": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/ExportDynamoToS3-51784b4b737377367956-build.zip"
         },
-        "getVisuals": {
-          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-          "s3Key": "amplify-builds/getVisuals-3965506e46646b575453-build.zip"
+        "FoodSentinelleGraphGeneratored": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/FoodSentinelleGraphGeneratored-327a44544d3163554b35-build.zip"
         },
-        "getRestaurant": {
-          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-          "s3Key": "amplify-builds/getRestaurant-6571454946575544365a-build.zip"
+        "SentimentIntensityAnalyzed": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/SentimentIntensityAnalyzed-4b46614d57526a6b3671-build.zip"
         },
-        "scrapSelenium": {
-          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-          "s3Key": "amplify-builds/scrapSelenium-43694366466b63737a45-build.zip"
+        "apiGetRestaurant": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/apiGetRestaurant-774769347154374e654f-build.zip"
         },
-        "ExportDynamoDbToS3": {
-          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
-          "s3Key": "amplify-builds/ExportDynamoDbToS3-50536947353934386e61-build.zip"
+        "apiGetRestaurants": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/apiGetRestaurants-65672f525a7a5931444c-build.zip"
+        },
+        "apiGetVisuals": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/apiGetVisuals-44547549697571523063-build.zip"
         }
       },
       "api": {

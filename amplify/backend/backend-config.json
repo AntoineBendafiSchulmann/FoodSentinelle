@@ -8,7 +8,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "getVisuals"
+          "resourceName": "apiGetVisuals"
         },
         {
           "attributes": [
@@ -16,7 +16,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "getRestaurants"
+          "resourceName": "apiGetRestaurants"
         },
         {
           "attributes": [
@@ -24,7 +24,7 @@
             "Arn"
           ],
           "category": "function",
-          "resourceName": "getRestaurant"
+          "resourceName": "apiGetRestaurant"
         }
       ],
       "providerPlugin": "awscloudformation",
@@ -32,111 +32,132 @@
     }
   },
   "function": {
-    "ExportDynamoDbToS3": {
+    "ExportDynamoToS3": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "getRestaurant": {
-      "build": true,
-      "providerPlugin": "awscloudformation",
-      "service": "Lambda"
-    },
-    "getRestaurants": {
+    "FoodSentinelleGraphGeneratored": {
       "build": true,
       "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "getVisuals": {
+    "SentimentIntensityAnalyzed": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
-    "scrapSelenium": {
+    "apiGetRestaurant": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "apiGetRestaurants": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "apiGetVisuals": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "parameters": {
-    "AMPLIFY_function_ExportDynamoDbToS3_deploymentBucketName": {
+    "AMPLIFY_function_ExportDynamoToS3_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "ExportDynamoDbToS3"
+          "resourceName": "ExportDynamoToS3"
         }
       ]
     },
-    "AMPLIFY_function_ExportDynamoDbToS3_s3Key": {
+    "AMPLIFY_function_ExportDynamoToS3_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "ExportDynamoDbToS3"
+          "resourceName": "ExportDynamoToS3"
         }
       ]
     },
-    "AMPLIFY_function_getRestaurant_deploymentBucketName": {
+    "AMPLIFY_function_FoodSentinelleGraphGeneratored_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "getRestaurant"
+          "resourceName": "FoodSentinelleGraphGeneratored"
         }
       ]
     },
-    "AMPLIFY_function_getRestaurant_s3Key": {
+    "AMPLIFY_function_FoodSentinelleGraphGeneratored_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "getRestaurant"
+          "resourceName": "FoodSentinelleGraphGeneratored"
         }
       ]
     },
-    "AMPLIFY_function_getRestaurants_deploymentBucketName": {
+    "AMPLIFY_function_SentimentIntensityAnalyzed_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "getRestaurants"
+          "resourceName": "SentimentIntensityAnalyzed"
         }
       ]
     },
-    "AMPLIFY_function_getRestaurants_s3Key": {
+    "AMPLIFY_function_SentimentIntensityAnalyzed_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "getRestaurants"
+          "resourceName": "SentimentIntensityAnalyzed"
         }
       ]
     },
-    "AMPLIFY_function_getVisuals_deploymentBucketName": {
+    "AMPLIFY_function_apiGetRestaurant_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "getVisuals"
+          "resourceName": "apiGetRestaurant"
         }
       ]
     },
-    "AMPLIFY_function_getVisuals_s3Key": {
+    "AMPLIFY_function_apiGetRestaurant_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "getVisuals"
+          "resourceName": "apiGetRestaurant"
         }
       ]
     },
-    "AMPLIFY_function_scrapSelenium_deploymentBucketName": {
+    "AMPLIFY_function_apiGetRestaurants_deploymentBucketName": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "scrapSelenium"
+          "resourceName": "apiGetRestaurants"
         }
       ]
     },
-    "AMPLIFY_function_scrapSelenium_s3Key": {
+    "AMPLIFY_function_apiGetRestaurants_s3Key": {
       "usedBy": [
         {
           "category": "function",
-          "resourceName": "scrapSelenium"
+          "resourceName": "apiGetRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetVisuals_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetVisuals"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetVisuals_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetVisuals"
         }
       ]
     }
