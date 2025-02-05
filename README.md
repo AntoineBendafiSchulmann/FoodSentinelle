@@ -17,6 +17,7 @@ FoodSentinelle is a project designed to manipulate and analyze restaurant review
 - [Dashboard Quicksight](#dashboard-quicksight)
 - [Monte Carlo Method](#monte-carlo-method)
 - [Scatter Plot Analysis](#scatter-plot-analysis)
+- [Database Schema](#)
 - [Contributors](#contributors)
 
 ---
@@ -194,6 +195,12 @@ The Monte Carlo method is used to simulate and predict sentiment trends based on
 
 ![scatter plot](./docs/words_frequency.png)
 The scatter plot visualization provides insights into word frequency and sentiment correlations within restaurant reviews.
+
+---
+
+## **Database Schema**
+
+![database schema](./docs/database.png)
 
 ---
 
