@@ -33,7 +33,7 @@ def find_s3_object_with_prefix(bucket, prefix):
     return None
 
 def get_presigned_url_with_prefix(file_key):
-    bucket_name = os.environ.get("VISUALS_BUCKET", "foodsentinelle-charts-2025")
+    bucket_name = os.environ.get("VISUALS_BUCKET", "foodsentinelle-charts-2025/charts/")
     if not file_key:
         return {
             "statusCode": 400,

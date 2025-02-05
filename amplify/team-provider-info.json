@@ -25,9 +25,21 @@
           "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
           "s3Key": "amplify-builds/SentimentIntensityAnalyzed-4b46614d57526a6b3671-build.zip"
         },
-        "apiGetRestaurant": {},
-        "apiGetRestaurants": {},
-        "apiGetVisuals": {}
+        "apiGetRestaurant": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/apiGetRestaurant-774769347154374e654f-build.zip"
+        },
+        "apiGetRestaurants": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/apiGetRestaurants-65672f525a7a5931444c-build.zip"
+        },
+        "apiGetVisuals": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-2b6bd-deployment",
+          "s3Key": "amplify-builds/apiGetVisuals-61422f316d53776d3565-build.zip"
+        }
+      },
+      "api": {
+        "restaurants": {}
       }
     }
   }

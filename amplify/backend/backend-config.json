@@ -112,6 +112,54 @@
           "resourceName": "SentimentIntensityAnalyzed"
         }
       ]
+    },
+    "AMPLIFY_function_apiGetRestaurant_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetRestaurant"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetRestaurant_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetRestaurant"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetRestaurants_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetRestaurants_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetRestaurants"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetVisuals_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetVisuals"
+        }
+      ]
+    },
+    "AMPLIFY_function_apiGetVisuals_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "apiGetVisuals"
+        }
+      ]
     }
   }
 }
