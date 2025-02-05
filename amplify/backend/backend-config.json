@@ -37,6 +37,17 @@
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     },
+    "FoodSentinelleGraphGenerator": {
+      "build": true,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "SentimentIntensityAnalyzer": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
     "getRestaurant": {
       "build": true,
       "providerPlugin": "awscloudformation",
@@ -73,6 +84,38 @@
         {
           "category": "function",
           "resourceName": "ExportDynamoDbToS3"
+        }
+      ]
+    },
+    "AMPLIFY_function_FoodSentinelleGraphGenerator_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "FoodSentinelleGraphGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_FoodSentinelleGraphGenerator_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "FoodSentinelleGraphGenerator"
+        }
+      ]
+    },
+    "AMPLIFY_function_SentimentIntensityAnalyzer_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SentimentIntensityAnalyzer"
+        }
+      ]
+    },
+    "AMPLIFY_function_SentimentIntensityAnalyzer_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "SentimentIntensityAnalyzer"
         }
       ]
     },

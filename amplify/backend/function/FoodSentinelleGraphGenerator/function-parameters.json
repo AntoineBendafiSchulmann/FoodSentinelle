@@ -1,0 +1,8 @@
+{
+  "lambdaLayers": [
+    {
+      "type": "ExternalLayer",
+      "arn": "arn:aws:lambda:eu-west-3:767398026641:layer:AWSLambda-Python38-SciPy1x:29"
+    }
+  ]
+}

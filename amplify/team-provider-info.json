@@ -32,6 +32,14 @@
         "ExportDynamoDbToS3": {
           "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
           "s3Key": "amplify-builds/ExportDynamoDbToS3-50536947353934386e61-build.zip"
+        },
+        "SentimentIntensityAnalyzer": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+          "s3Key": "amplify-builds/SentimentIntensityAnalyzer-52774347636a684a6a6d-build.zip"
+        },
+        "FoodSentinelleGraphGenerator": {
+          "deploymentBucketName": "amplify-foodsentinelle-dev-105857-deployment",
+          "s3Key": "amplify-builds/FoodSentinelleGraphGenerator-42785830346b32563038-build.zip"
         }
       },
       "api": {
