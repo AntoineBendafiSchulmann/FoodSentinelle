@@ -17,7 +17,8 @@ FoodSentinelle is a project designed to manipulate and analyze restaurant review
 - [Dashboard Quicksight](#dashboard-quicksight)
 - [Monte Carlo Method](#monte-carlo-method)
 - [Scatter Plot Analysis](#scatter-plot-analysis)
-- [Database Schema](#)
+- [Database Schema](#database-schema)
+- [Sentiment Analysis](#sentiment-analysis)
 - [Contributors](#contributors)
 
 ---
@@ -172,6 +173,9 @@ aws lambda invoke \
 ## **Dashboard QuickSight**
 
 ![quicksight](./docs/dashboard_quicksight.png)
+![vertical chart](./docs/vertical_bar_chart.png)
+![radar chart](./docs/radar_chart_quicksight.png)
+![table chart](./docs/table_chart.png)
 
 Amazon QuickSight is integrated to provide interactive visual analytics on the collected restaurant data. The dashboard includes:
 
@@ -203,6 +207,11 @@ The scatter plot visualization provides insights into word frequency and sentime
 ![database schema](./docs/database.png)
 
 ---
+
+## **Sentiment analysis**
+
+![sentiments repartition](./docs/sentiments.png)
+This is the repartition chart based on our analysis.
 
 ## **Contributors**
 
